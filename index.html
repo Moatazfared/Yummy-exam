@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="bg-black">
+<div id="loading">
+    <span class="loader"></span>
+</div>
+
+
+
+    <div class="sideBar d-flex  vh-100 position-fixed" id="slider">
+        <div class="left text-white w-75 pt-5 d-flex flex-column justify-content-between">
+            <div class="top overflow-hidden">
+                <ul class="ps-3">
+                    <li id="search" class="mb-2">Search</li>
+                    <li id="categoryli" class="mb-2">Categories</li>
+                    <li id="AreaLi" class="mb-2">Area</li>
+                    <li id="ingLi" class="mb-2">Ingredients</li>
+                    <li id="contactLi" class="mb-2">Contact Us</li>
+                </ul>
+            </div>
+            <div class="bottom ps-3">
+                <span><i class="fa-brands fa-facebook"></i></span>
+                <span><i class="fa-brands fa-twitter"></i></span>
+                <span><i class="fa-solid fa-globe"></i></span>
+                <p>Copyright Â© 2019 All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="right w-25 bg-white d-flex flex-column align-items-center justify-content-between pt-5 ">
+            <div class="top d-flex justify-content-center">
+                <img src="./imgs/logo.png" class="w-75" alt="">
+            </div>
+            <div class="center" id="iconSlider"><i class=" fa-solid open-close-icon fa-2x fa-align-justify"></i></div>
+            <div class="bottom">
+                <span><i class="fa-brands fa-twitter"></i></span>
+                <p><i class="fa-solid fa-share-nodes"></i></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container pt-5  contSearch d-none">
+        <div class="content d-flex justify-content-between w-75 m-auto">
+            <input type="text" id="searchByName" class="form-control bg-transparent text-white  "
+                placeholder="Search By name">
+            <input type="text" id="searchByLetter" class="form-control bg-transparent text-white  "
+                placeholder="Search By first Letter" maxlength="1">
+        </div>
+
+    </div>
+
+
+
+ 
+    <div class=" mainPage container pt-5 ps-5  ">
+        <div class="row gy-3" id="myData">
+
+
+        </div>
+    </div>
+
+
+
+    <div class=" specData container p-5 d-none">
+        <div class="row" id="specData">
+
+        </div>
+    </div>
+
+
+    
+
+    <div class="areaPage container pt-5 ps-5 d-none">
+        <div class="row gy-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>American</h3>
+                <div data-area="American" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>British</h3>
+                <div data-area="British" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Canadian</h3>
+                <div data-area="Canadian" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Chinese</h3>
+                <div data-area="Chinese" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Croatian</h3>
+                <div data-area="Croatian" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Dutch</h3>
+                <div data-area="Dutch" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Egyptian">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Egyptian</h3>
+                <div data-area="Egyptian" class="cover"></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Filipino">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Filipino</h3>
+                <div data-area="Filipino" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="French">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>French</h3>
+                <div data-area="French" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Greek">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Greek</h3>
+                <div data-area="Greek" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Indian">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Indian</h3>
+                <div data-area="Indian" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Irish">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Irish</h3>
+                <div data-area="Irish" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Italian">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Italian</h3>
+                <div data-area="Italian" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Jamaican">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Jamaican</h3>
+                <div data-area="Jamaican" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Japanese">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Japanese</h3>
+                <div data-area="Japanese" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Kenyan">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Kenyan</h3>
+                <div data-area="Kenyan" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Malaysian">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Malaysian</h3>
+                <div data-area="Malaysian" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Mexican">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Mexican</h3>
+                <div data-area="Mexican" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Moroccan">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Moroccan</h3>
+                <div data-area="Moroccan" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Polish">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Polish</h3>
+                <div data-area="Polish" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Portuguese">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Portuguese</h3>
+                <div data-area="Portuguese" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Russian">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Russian</h3>
+                <div data-area="Russian" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Spanish">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Spanish</h3>
+                <div data-area="Spanish" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Thai">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Thai</h3>
+                <div data-area="Thai" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Tunisian">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Tunisian</h3>
+                <div data-area="Tunisian" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Turkish">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Turkish</h3>
+                <div data-area="Turkish" class="cover"></div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Unknown">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Unknown</h3>
+                <div data-area="Unknown" class="cover"></div>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center text-white position-relative" data-area="Vietnamese">
+                <i class="fa-solid fa-house-laptop fa-4x"></i>
+                <h3>Vietnamese</h3>
+                <div data-area="Vietnamese" class="cover"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-5 ps-5 ing">
+        <div class="row gy-3" id="dataIng">
+
+        </div>
+
+    </div>
+
+    <div id="contForm" class="container  vh-100 d-none justify-content-center align-items-center">
+
+        <form class="from">
+            <div class="inp">
+                <input id="inpName" type="text" class="form-control" placeholder="Enter Your Name">
+                <p id="alertName">Special characters and numbers not allowed</p>
+            </div>
+            <div class="inp">
+                <input id="inpEmail" type="email" class="form-control" placeholder="enter Your Email">
+                <p id="alertEmail">Email not valid *exemple@yyy.zzz</p>
+            </div>
+            <div class="inp">
+                <input id="inpNumber" type="number" class="form-control" placeholder="enter Your Phone">
+                <p id="alertNumber">Enter valid Phone Number</p>
+            </div>
+            <div class="inp">
+                <input id="inpAge" type="number" class="form-control" placeholder="enter Your Age">
+                <p id="alertAge">Enter valid age</p>
+            </div>
+            <div class="inp">
+                <input id="inpPassword" type="password" class="form-control" placeholder="enter Your password">
+                <p id="alertPassword">Enter valid password *Minimum eight characters, at least one letter and one
+                    number:*</p>
+            </div>
+            <div class="inp">
+                <input id="inpRePassword" type=" password" class="form-control" placeholder="Confirm Your password">
+                <p id="alertRePassword">Enter valid repassword</p>
+            </div>
+
+            <button id="submitBtn" disabled="true"  class="btn btn-outline-danger px-2 mt-3">Submit</button>
+        </form>
+
+
+    </div>
+
+    
+
+
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
